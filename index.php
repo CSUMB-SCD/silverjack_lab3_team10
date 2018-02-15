@@ -35,7 +35,24 @@
                 foreach ($allPlayers as $player) {
                     echo $player['name'] . "<br>";
                 }
-            }    
+            }
+            function getImgURlForCardIndex($index) {
+                
+                // get a number from 0 to 51
+                // return an image url 
+                
+                $suitIndex = floor($index / 13); 
+                
+                echo "suitIndex: $suitIndex"; 
+            }
+            
+            function generateDeck() {
+                for ($i = 0; $i < 51; $i++) {
+                    $card = array(
+                        'imgURL' => ""
+                        ); 
+                }
+            }
             
             printGameState($allPlayers);
         ?>
