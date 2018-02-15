@@ -19,10 +19,17 @@
             );
             $player3 = array(
                 'name' => 'Raju',
-                'imgURL' => './img/profile_pictures/rk.png'
-                'hand' => array();
+                'imgURL' => './img/profile_pictures/rk.png',
+                'hand' => array(),
                 'points' => 0
                 );
+            $player4 = array(
+                'name' => 'Mayra',
+                'imgURL' => './img/profile_pictures/mayra.JPG',
+                'hand' => array(),
+                'points' => 0
+                );
+                
             
             function printGameState($allPlayers){
                 foreach ($allPlayers as $player) {
