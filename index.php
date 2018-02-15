@@ -6,7 +6,7 @@
         <?php
             $player1 = array(
                 'name' => 'Mathias',
-                'imgURL' => '/profile_pictures/koala.jpg',
+                'imgURL' => '/profile_pictures/mathias.jpg',
                 'hand' => array(),
                 'points' => 0
             );
