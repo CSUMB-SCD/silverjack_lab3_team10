@@ -59,12 +59,11 @@
                 }
             } */
             
-            printGameState($allPlayers);
+            //printGameState($allPlayers);
+            /* https://ide.c9.io/uuts/utsab */
         ?>
         <div class="footer">
   			<p>Copyright @ Team 10 - CST 336 2018</p> <!-- Copyright @ Team 10 - CST336 2018 --> 
 		</div>
     </body>
 </html>
-
-/* https://ide.c9.io/uuts/utsab */
