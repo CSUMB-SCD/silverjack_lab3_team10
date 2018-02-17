@@ -17,8 +17,9 @@ h1 {
    color: white;
    text-align: center;
 }
-.body {
+body{
     background-color: black;
+    color: white;
 }
 header{
     text-align: center;
@@ -62,7 +63,7 @@ h1 {
 .footer {
    position: fixed;
    left: 0;
-   bottom: 0;
+   bottom: -50px;
    width: 100%;
    background-color: transparent;
    color: white;
