@@ -7,7 +7,8 @@
     <body>
         <?php
             $cards = []; //Array of the cards
-            $usedCards = []; //Array of the cards that is used
+            //$usedCards = []; //Array of the cards that is used
+            //fillUsedCards($usedCards); // fills the array with false
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
@@ -22,33 +23,47 @@
                 'hand' => array(),
                 'points' => 0
             );
+            
             $player3 = array(
                 'name' => 'Raju',
                 'imgURL' => './img/profiles_pictures/rk.png',
                 'hand' => array(),
                 'points' => 0
-                );
+            );
+            
             $player4 = array(
                 'name' => 'Mayra',
                 'imgURL' => './img/profiles_pictures/mayra.JPG',
                 'hand' => array(),
                 'points' => 0
-                );
+            );
                 $allPlayers = array(
                 $player1,
                 $player2,
                 $player3,
                 $player4
-                    );
+            );
                 
             function play(){
-            for($i=0; $i<2; $i++){
-                ${randomValue . $i } = rand(0,12);
-                ${folder . $i } = rand(0,3);
-                //
-                displaySymbol(${randomValue . $i }, ${folder . $i });
-            }
-            points($randomValue0, $randomValue1);
+                $usedCards = []; //Array of the cards that is used
+                fillUsedCards($usedCards); // fills the array with false
+                
+                for($i=0; $i<2; $i++){
+                    ${randomValue . $i } = rand(0,0);
+                    ${folder . $i } = rand(0,0);
+                    
+                    // Checks for used cards
+                    // Needs to be add ed into some sort of loop
+                    if(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards)) 
+                        displaySymbol(${randomValue . $i }, ${folder . $i });
+                    else{
+                        ${randomValue . $i } = rand(1,12);
+                        ${folder . $i } = rand(0,3);
+                        displaySymbol(${randomValue . $i }, ${folder . $i });
+                    }
+                }
+                
+                points($randomValue0, $randomValue1);
             }
             
             function displaySymbol($randomValue, $folder) {
@@ -94,9 +109,15 @@
             }
              
             // used cards
-            function checkUsedCards($symbol, $folder, $usedCards){
+            function checkUsedCards($symbol, $folder, &$usedCards){
                 //$pick = rand(0, 52);
-                $pickedCard = $symbol . $folder
+                $pickedCard = $symbol . $folder;
+                if(!$usedCards[$pickedCard]){
+                    $usedCards[$pickedCard] = true;
+                    return false;
+                }
+                return true;
+                
             }
             
             play();
@@ -125,26 +146,63 @@
                         'imgURL' => ""
                         ); 
                 }
-<<<<<<< HEAD
-            } */
+            }
             
             //printGameState($allPlayers);
-<<<<<<< HEAD
             /* https://ide.c9.io/uuts/utsab */
-=======
->>>>>>> refs/remotes/origin/master
-=======
-            } 
-         // https://ide.c9.io/uuts/utsab    
->>>>>>> 68306e50dd6a8334e4b4ca2fb5e6ecaa590fc5f2
+            
+            function fillUsedCards(& $usedCards){
+                for($i=0; $i<52; $i++){
+                    switch($i % 4){
+                        case 0: $folder = "clubs";
+                            break;
+                        
+                        case 1: $folder = "diamonds";
+                            break;
+                            
+                        case 2: $folder = "hearts";
+                            break;
+                            
+                        default: $folder = "spades";
+                            break;
+                    }
+                    
+                    switch($i % 13){
+                        case 0: $symbol = "1";
+                                break;
+                        case 1: $symbol = "2";
+                                break;
+                        case 2: $symbol = "3";
+                                break;
+                        case 3: $symbol = "4"; 
+                                break;
+                        case 4: $symbol = "5";
+                                break;
+                        case 5: $symbol = "6";
+                                break;
+                        case 6: $symbol = "7";
+                                break;
+                        case 7: $symbol = "8";
+                                break;
+                        case 8: $symbol = "9"; 
+                                break;
+                        case 9: $symbol = "10";
+                                break;
+                        case 10: $symbol = "11";
+                                break;
+                        case 11: $symbol = "12";
+                                break;
+                        case 12: $symbol = "13";
+                                break;
+                    }
+                    $key = $symbol . $folder;
+                    $usedCards[$key] = false;
+                }
+            }
+            
         ?>
         <div class="footer">
   			<p>Copyright @ Team 10 - CST 336 2018</p> <!-- Copyright @ Team 10 - CST336 2018 --> 
 		</div>
     </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-
->>>>>>> 68306e50dd6a8334e4b4ca2fb5e6ecaa590fc5f2
