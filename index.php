@@ -49,18 +49,17 @@
                 fillUsedCards($usedCards); // fills the array with false
                 
                 for($i=0; $i<2; $i++){
-                    ${randomValue . $i } = rand(0,0);
-                    ${folder . $i } = rand(0,0);
+                    ${randomValue . $i } = rand(0,12);
+                    ${folder . $i } = rand(0,3);
                     
-                    // Checks for used cards
-                    // Needs to be add ed into some sort of loop
-                    if(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards)) 
-                        displaySymbol(${randomValue . $i }, ${folder . $i });
-                    else{
-                        ${randomValue . $i } = rand(1,12);
+                    // Loop to check if a card has been used
+                    while(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards)){
+                        ${randomValue . $i } = rand(0,12);
                         ${folder . $i } = rand(0,3);
-                        displaySymbol(${randomValue . $i }, ${folder . $i });
                     }
+                    
+                    displaySymbol(${randomValue . $i }, ${folder . $i });
+                    
                 }
                 
                 points($randomValue0, $randomValue1);
