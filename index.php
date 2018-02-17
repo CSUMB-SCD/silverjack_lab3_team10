@@ -31,7 +31,7 @@
                 );
                 
             
-            function printGameState($allPlayers){
+         /*   function printGameState($allPlayers){
                 foreach ($allPlayers as $player) {
                     echo $player['name'] . "<br>";
                 }
@@ -52,7 +52,7 @@
                         'imgURL' => ""
                         ); 
                 }
-            }
+            } */
             
             printGameState($allPlayers);
         ?>
