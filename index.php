@@ -48,7 +48,6 @@
                     $player3,
                     $player4,
                     );
-               
             
             function play(){
             for($i=0; $i<4; $i++){
@@ -153,8 +152,10 @@
             play();
             
             function printGameState($allPlayers){
+                $i=0;
                 foreach ($allPlayers as $player) {
-                    echo "<img src='" . $player['imgURL'] . "' />";
+                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    echo "<br/>";
                     echo $player['name'] . "<br>";
 
                 }
@@ -254,4 +255,3 @@
 		</div>
     </body>
 </html>
-
