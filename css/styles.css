@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 body{
+=======
+>>>>>>> 27227377626f1eb9eb8b970d174e026ca9d484d1
 imgURL.resize {
     width: 72px;
     height: 40px;
@@ -54,6 +57,7 @@ input{
 imgURL.resize{
     width: 72px;
     height: 40px;
+<<<<<<< HEAD
 }
 h1 {
     font-family: sans-serif;
@@ -69,4 +73,6 @@ h1 {
    text-align: center;
 
 
+=======
+>>>>>>> 27227377626f1eb9eb8b970d174e026ca9d484d1
 }
