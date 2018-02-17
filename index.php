@@ -45,20 +45,11 @@
             
             $allPlayers = array(
 
-<<<<<<< HEAD
                     $player1,
                     $player2,
                     $player3,
                     $player4,
                     );
-=======
-                $player1,
-                $player2,
-                $player3,
-                $player4,
-            );
-               
->>>>>>> 878825c1e2287decb17bc74dbdcd3a1a8e3acbe8
             
             function play(){
             for($i=0; $i<4; $i++){
