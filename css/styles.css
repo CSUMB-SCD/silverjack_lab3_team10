@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    text-align: center;
+}
+#reel0, #reel1, #reel2, #reel3{
+    height:140px;
+    width: 110px;
+    border-radius:5px;
+}
+input{
+    bottom:0px;
+    left:750px;
+    position:absolute;
+    font-size:1.5em;
+    background-color: red;
+    border:none;
+    outline:red; /*hides button outline when clicking on it*/
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    border-radius:10px;
+}
+    
+#output{
+    width:600px;   
+    margin:0 auto;
+    position:absolute;
+    text-align:center;
+    top:450px;
+    font-size:1.5em;
+    line-height: .7em;
+=======
 imgURL.resize{
     width: 72px;
     height: 40px;
@@ -14,4 +50,5 @@ h1 {
    background-color: transparent;
    color: white;
    text-align: center;
+>>>>>>> c1becad944325df5a71b9f7126a9cda71ff5cc2f
 }

@@ -4,6 +4,11 @@
         <title>SiverJack</title>
         <link href = "css/styles.css" rel="stylesheet" type="text/css" />
     </head>
+    <header>
+            <strong>
+                <h1>Silverjack</h1>
+            </strong>
+    </header>
     <body>
         <?php
             $cards = []; //Array of the cards
@@ -12,7 +17,7 @@
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
-                'imgURL' => '/profiles_pictures/mathias.jpg',
+                'imgURL' => './img/profiles_pictures/mathias.jpg',
                 'hand' => array(),
                 'points' => 0
             );
@@ -30,7 +35,6 @@
                 'hand' => array(),
                 'points' => 0
             );
-            
             $player4 = array(
                 'name' => 'Mayra',
                 'imgURL' => './img/profiles_pictures/mayra.JPG',
@@ -38,15 +42,25 @@
                 'points' => 0
             );
                 $allPlayers = array(
-                $player1,
-                $player2,
-                $player3,
-                $player4
-            );
-                
+
+                    $player1,
+                    $player2,
+                    $player3,
+                    $player4,
+                    );
+               
+            
             function play(){
+            for($i=0; $i<4; $i++){
+                ${randomValue . $i } = rand(0,12);
+                ${folder . $i } = rand(0,3);
+                //
+                displaySymbol(${randomValue . $i }, ${folder . $i });
+            }
+            points($randomValue0, $randomValue1, $randomValue2, $randomValue3);
                 $usedCards = []; //Array of the cards that is used
                 fillUsedCards($usedCards); // fills the array with false
+
                 
                 for($i=0; $i<2; $i++){
                     ${randomValue . $i } = rand(0,12);
@@ -65,6 +79,16 @@
                 points($randomValue0, $randomValue1);
             }
             
+
+            function  printGameState($allPlayers){
+                $i=0;
+                
+                foreach ($allPlayers as $player) {
+                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    echo "<br/>";
+                    echo $player['name'] . "<br/>";
+                    $i++;
+
             function displaySymbol($randomValue, $folder) {
             switch ($folder) {
                 case 0: $folder = "clubs";
@@ -106,8 +130,14 @@
             }
             echo "<img id='reel$pos' src='img/cards/$folder/$symbol.png' alt='$symbol' title='". ucfirst($symbol) . "' width='70' >";
             }
+            function points($num1, $num2, $num3, $num4){
+                echo $num1 + $num2 + $num3 + $num4;
+            }
              
             // used cards
+
+          /*  function checkUsedCards($symbol, $folder, $usedCards){
+
             function checkUsedCards($symbol, $folder, &$usedCards){
                 //$pick = rand(0, 52);
                 $pickedCard = $symbol . $folder;
@@ -118,14 +148,16 @@
                 return true;
                 
             }
-            
+            */
             play();
             
             function printGameState($allPlayers){
                 foreach ($allPlayers as $player) {
                     echo "<img src='" . $player['imgURL'] . "' />";
                     echo $player['name'] . "<br>";
+
                 }
+                
             }
             printGameState($allPlayers);
             getImgURlForCardIndex(0);
@@ -135,8 +167,7 @@
                 // return an image url 
                 
                 $suitIndex = floor($index / 13); 
-                
-                echo "suitIndex: $suitIndex"; 
+                echo "suitIndex:  $suitIndex"; 
             }
             
             function generateDeck() {
@@ -145,7 +176,25 @@
                         'imgURL' => ""
                         ); 
                 }
+
+            } 
+            
+        ?>
+        <form>
+                <input type = "submit" value = "Play Again"/>
+        </form>
+    </body>
+    
+</html>
+
             }
+           /* function generateHand($suit)
+            {
+
+                
+                , 
+            }*/
+         // https://ide.c9.io/uuts/utsab    
             
             //printGameState($allPlayers);
             /* https://ide.c9.io/uuts/utsab */
@@ -198,10 +247,10 @@
                     $usedCards[$key] = false;
                 }
             }
-            
         ?>
         <div class="footer">
   			<p>Copyright @ Team 10 - CST 336 2018</p> <!-- Copyright @ Team 10 - CST336 2018 --> 
 		</div>
     </body>
 </html>
+
