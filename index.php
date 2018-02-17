@@ -11,7 +11,7 @@
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
-                'imgURL' => '/profiles_pictures/mathias.jpg',
+                'imgURL' => './img/profiles_pictures/mathias.jpg',
                 'hand' => array(),
                 'points' => 0
             );
@@ -42,13 +42,13 @@
                     );
                 
             function play(){
-            for($i=0; $i<2; $i++){
+            for($i=0; $i<4; $i++){
                 ${randomValue . $i } = rand(0,12);
                 ${folder . $i } = rand(0,3);
                 //
                 displaySymbol(${randomValue . $i }, ${folder . $i });
             }
-            points($randomValue0, $randomValue1);
+            points($randomValue0, $randomValue1, $randomValue2, $randomValue3);
             }
             
             function displaySymbol($randomValue, $folder) {
@@ -92,13 +92,16 @@
             }
             echo "<img id='reel$pos' src='img/cards/$folder/$symbol.png' alt='$symbol' title='". ucfirst($symbol) . "' width='70' >";
             }
+            function points($num1, $num2, $num3, $num4){
+                echo $num1 + $num2 + $num3 + $num4;
+            }
              
             // used cards
-            function checkUsedCards($symbol, $folder, $usedCards){
+          /*  function checkUsedCards($symbol, $folder, $usedCards){
                 //$pick = rand(0, 52);
                 $pickedCard = $symbol . $folder
             }
-            
+            */
             play();
             
             function printGameState($allPlayers){
@@ -125,7 +128,13 @@
                         'imgURL' => ""
                         ); 
                 }
-            } 
+            }
+           /* function generateHand($suit)
+            {
+
+                
+                , 
+            }*/
          // https://ide.c9.io/uuts/utsab    
         ?>
         <div class="footer">
