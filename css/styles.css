@@ -1,7 +1,9 @@
+
 imgURL.resize {
     width: 72px;
     height: 40px;
 }
+
 h1 {
     font-family: sans-serif;
     text-align: center;
@@ -48,4 +50,21 @@ input{
     top:450px;
     font-size:1.5em;
     line-height: .7em;
+}
+imgURL.resize{
+    width: 72px;
+    height: 40px;
+}
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: transparent;
+   color: white;
+   text-align: center;
 }

@@ -45,12 +45,11 @@
             
             $allPlayers = array(
 
-                $player1,
-                $player2,
-                $player3,
-                $player4,
-            );
-               
+                    $player1,
+                    $player2,
+                    $player3,
+                    $player4,
+                    );
             
             function play(){
                 $usedCards = []; //Array of the cards that is used
@@ -147,8 +146,10 @@
             play();
             
             function printGameState($allPlayers){
+                $i=0;
                 foreach ($allPlayers as $player) {
-                    echo "<img src='" . $player['imgURL'] . "' />";
+                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    echo "<br/>";
                     echo $player['name'] . "<br>";
 
                 }
