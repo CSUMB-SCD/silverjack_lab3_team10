@@ -61,5 +61,8 @@
             
             printGameState($allPlayers);
         ?>
+        <div class="footer">
+  			<p>Copyright @ Team 10 - CST 336 2018</p> <!-- Copyright @ Team 10 - CST336 2018 --> 
+		</div>
     </body>
 </html>
