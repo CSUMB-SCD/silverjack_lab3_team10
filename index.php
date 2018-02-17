@@ -53,7 +53,6 @@
                
             
             function play(){
-            for($i=0; $i<4; $i++){
                 $usedCards = []; //Array of the cards that is used
                 fillUsedCards($usedCards); // fills the array with false
 
@@ -75,7 +74,8 @@
             }
             
 
-            function  printGameState($allPlayers){
+            /*
+            function printGameState($allPlayers){
                 $i=0;
                 
                 foreach ($allPlayers as $player) {
@@ -84,7 +84,7 @@
                     echo $player['name'] . "<br/>";
                     $i++;
                 }
-            }
+            }*/
             
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
@@ -133,9 +133,6 @@
             }
              
             // used cards
-
-          /*  function checkUsedCards($symbol, $folder, $usedCards){
-
             function checkUsedCards($symbol, $folder, &$usedCards){
                 //$pick = rand(0, 52);
                 $pickedCard = $symbol . $folder;
@@ -146,7 +143,7 @@
                 return true;
                 
             }
-            */
+            
             play();
             
             function printGameState($allPlayers){
@@ -180,7 +177,6 @@
             
             //printGameState($allPlayers);
             /* https://ide.c9.io/uuts/utsab */
-                }
            /* function generateHand($suit)
             {
 
