@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: black;
     color: white;
@@ -32,4 +33,22 @@ input{
     top:450px;
     font-size:1.5em;
     line-height: .7em;
+=======
+imgURL.resize{
+    width: 72px;
+    height: 40px;
+}
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: transparent;
+   color: white;
+   text-align: center;
+>>>>>>> c1becad944325df5a71b9f7126a9cda71ff5cc2f
 }
