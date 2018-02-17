@@ -6,6 +6,9 @@
     </head>
     <body>
         <?php
+            $cards = []; //Array of the cards
+            $usedCards = []; //Array of the cards that is used
+            $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
                 'imgURL' => '/profile_pictures/mathias.jpg',
