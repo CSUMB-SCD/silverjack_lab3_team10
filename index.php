@@ -43,34 +43,29 @@
                 'points' => 0
             );
             
-             /* $player5 = array(
-                'name' => 'Jazz',
-                'imgURL' => './img/profiles_pictures/jazz.jpg',
-                'hand' => array(),
-                'points' => 0
-            ); */
-            
-            
             $allPlayers = array(
 
                 $player1,
                 $player2,
                 $player3,
                 $player4,
+                
             );
-               
             
-            function play(){
+            function play()
+            {
                 $usedCards = []; //Array of the cards that is used
                 fillUsedCards($usedCards); // fills the array with false
 
                 
-                for($i=0; $i<2; $i++){
+                for($i=0; $i<4; $i++)
+                {
                     ${randomValue . $i } = rand(0,12);
                     ${folder . $i } = rand(0,3);
                     
                     // Loop to check if a card has been used
-                    while(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards)){
+                    while(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards))
+                    {
                         ${randomValue . $i } = rand(0,12);
                         ${folder . $i } = rand(0,3);
                     }
@@ -152,20 +147,44 @@
                 
             }
             
-            play();
+           
+           
+          //play();
+           
             
             function printGameState($allPlayers){
                 $i=0;
                 foreach ($allPlayers as $player) {
                     echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    play();
                     echo "<br/>";
+                    
                     echo $player['name'] . "<br>";
                     $i++;
                 }
+                //need sim. f(x)n
+                
+                
                 
             }
             printGameState($allPlayers);
             getImgURlForCardIndex(0);
+            
+            
+            /*function printCards($allPlayers)
+            {
+                $i=0;
+                foreach ($allPlayers as $player) 
+                {
+                   play();
+                    echo "<br/>";
+                    echo $player['name'] . "<br>";
+                    $i++;
+                }
+            }
+            printCards($allPlayers);*/
+            
+            
             function getImgURlForCardIndex($index) {
                 
                 // get a number from 0 to 51
