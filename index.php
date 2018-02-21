@@ -43,9 +43,9 @@
                 'points' => 0
             );
             
-            /*$player4 = array(
+            /*$player5 = array(
                 'name' => 'Jazz',
-                'imgURL' => './img/profiles_pictures/mayra.JPG',
+                'imgURL' => './img/profiles_pictures/jazz.JPG',
                 'hand' => array(),
                 'points' => 0
             );*/
