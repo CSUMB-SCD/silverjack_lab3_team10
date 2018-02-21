@@ -12,8 +12,6 @@
     <body>
         <?php
             $cards = []; //Array of the cards
-            //$usedCards = []; //Array of the cards that is used
-            //fillUsedCards($usedCards); // fills the array with false
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
@@ -78,20 +76,6 @@
                 }
                 
             }
-            
-
-            /*
-            function printGameState($allPlayers){
-                $i=0;
-                
-                foreach ($allPlayers as $player) {
-                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
-                    echo "<br/>";
-                    echo $player['name'] . "<br/>";
-                    $i++;
-                }
-            }*/
-            
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
                     case 0: $folder = "clubs";
