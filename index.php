@@ -53,11 +53,14 @@
                
             
             function play(){
+                //global $allPlayers;
+                //printGameState($allPlayers);
+                //getImgURlForCardIndex(0);
+                
                 $usedCards = []; //Array of the cards that is used
                 fillUsedCards($usedCards); // fills the array with false
-
                 
-                for($i=0; $i<5; $i++){
+                for($i=0; $i<52; $i++){
                     ${randomValue . $i } = rand(0,12);
                     ${folder . $i } = rand(0,3);
                     
@@ -72,19 +75,6 @@
                 }
                 
             }
-            
-
-            /*
-            function printGameState($allPlayers){
-                $i=0;
-                
-                foreach ($allPlayers as $player) {
-                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
-                    echo "<br/>";
-                    echo $player['name'] . "<br/>";
-                    $i++;
-                }
-            }*/
             
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
@@ -145,19 +135,22 @@
             }
             
             play();
+            printGameState($allPlayers);
+            getImgURlForCardIndex(0);
             
             function printGameState($allPlayers){
                 $i=0;
                 foreach ($allPlayers as $player) {
                     echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    //play();
                     echo "<br/>";
                     echo $player['name'] . "<br>";
                     $i++;
+                    //play();
                 }
-                
             }
-            printGameState($allPlayers);
-            getImgURlForCardIndex(0);
+            
+            
             function getImgURlForCardIndex($index) {
                 
                 // get a number from 0 to 51
@@ -168,11 +161,7 @@
             }
             
             function generateDeck() {
-                for ($i = 0; $i < 51; $i++) {
-                    $card = array(
-                        'imgURL' => ""
-                        ); 
-                }
+                // 
 
             } 
             
