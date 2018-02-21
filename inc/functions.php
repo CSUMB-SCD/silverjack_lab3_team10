@@ -67,6 +67,12 @@
             displaySymbol(${randomValue . $i }, ${folder . $i });
             
         }
+        if($p1 > 42){
+            echo "You got more than 42, you lost. Your result was: ";
+        }
+        if($p1 == 42){
+            echo "You won! Your result is: ";
+        }
         echo $p1;
         
     }

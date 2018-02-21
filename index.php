@@ -4,7 +4,9 @@ include 'inc/functions.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SiverJack</title>
+        <title>SilverJack</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+                    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href = "css/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <header>
@@ -20,7 +22,7 @@ include 'inc/functions.php';
         ?>
             
         <form>
-                <input type = "submit" value = "Play Again"/>
+                <button class="btn btn-primary" onclick="window.location.href='index.php'">Play Again</button>
         </form>
 
         <div class="footer">
