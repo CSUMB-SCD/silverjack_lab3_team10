@@ -11,10 +11,6 @@
     </header>
     <body>
         <?php
-<<<<<<< HEAD
-            $cards = []; //Array of the cards
-=======
->>>>>>> 61dd387f742ed437a3856da021888bc8f7a9ee52
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
@@ -83,11 +79,7 @@
                 }
                 
             }
-<<<<<<< HEAD
-=======
-            
-            
->>>>>>> 61dd387f742ed437a3856da021888bc8f7a9ee52
+
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
                     case 0: $folder = "clubs";
