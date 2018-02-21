@@ -62,9 +62,11 @@
             //****************************
             
             function play(& $usedCards){
-                for($i=0; $i<4; $i++) // Change needed to get score]
+                $p1;
+                while($p1 < 37)// Change needed to get score
                 {
                     ${randomValue . $i } = rand(0,12);
+                    $p1+= ${randomValue . $i } + 1;
                     ${folder . $i } = rand(0,3);
                     
                     // Loop to check if a card has been used
@@ -77,6 +79,7 @@
                     displaySymbol(${randomValue . $i }, ${folder . $i });
                     
                 }
+                echo $p1;
                 
             }
             
