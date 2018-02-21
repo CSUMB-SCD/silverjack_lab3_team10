@@ -60,13 +60,8 @@
                 
             );
             
-            function play()
-            {
-                $usedCards = []; //Array of the cards that is used
-                fillUsedCards($usedCards); // fills the array with false
-
-                
-                for($i=0; $i<4; $i++)
+            function play(& $usedCards){
+                for($i=0; $i<4; $i++) // Change needed to get score
                 {
                     ${randomValue . $i } = rand(0,12);
                     ${folder . $i } = rand(0,3);
@@ -161,10 +156,14 @@
            
             
             function printGameState($allPlayers){
+                $usedCards = []; //Array of the cards that is used
+                fillUsedCards($usedCards); // fills the array with false
+                
+                
                 $i=0;
                 foreach ($allPlayers as $player) {
                     echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
-                    play();
+                    play($usedCards);
                     echo "<br/>";
                     
                     echo $player['name'] . "<br>";
@@ -212,15 +211,6 @@
             } 
             
             
-            //printGameState($allPlayers);
-            /* https://ide.c9.io/uuts/utsab */
-           /* function generateHand($suit)
-            {
-
-                
-                , 
-            }*/
-         // https://ide.c9.io/uuts/utsab 
             
             function fillUsedCards(& $usedCards){
                 for($i=0; $i<52; $i++){
