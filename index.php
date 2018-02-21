@@ -11,7 +11,10 @@
     </header>
     <body>
         <?php
+<<<<<<< HEAD
             $cards = []; //Array of the cards
+=======
+>>>>>>> 61dd387f742ed437a3856da021888bc8f7a9ee52
             $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
@@ -58,8 +61,12 @@
                 
             );
             
+            //*****Function Call**********
+            printGameState($allPlayers);
+            //****************************
+            
             function play(& $usedCards){
-                for($i=0; $i<4; $i++) // Change needed to get score
+                for($i=0; $i<4; $i++) // Change needed to get score]
                 {
                     ${randomValue . $i } = rand(0,12);
                     ${folder . $i } = rand(0,3);
@@ -76,6 +83,11 @@
                 }
                 
             }
+<<<<<<< HEAD
+=======
+            
+            
+>>>>>>> 61dd387f742ed437a3856da021888bc8f7a9ee52
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
                     case 0: $folder = "clubs";
@@ -117,10 +129,6 @@
                 }
                 echo "<img id='reel$pos' src='img/cards/$folder/$symbol.png' alt='$symbol' title='". ucfirst($symbol) . "' width='70' >";
             }
-            
-            function points($num1, $num2, $num3, $num4){
-                echo $num1 + $num2 + $num3 + $num4;
-            }
              
             // used cards
             function checkUsedCards($symbol, $folder, &$usedCards){
@@ -134,9 +142,6 @@
                 
             }
             
-           
-           
-          //play();
            
             
             function printGameState($allPlayers){
@@ -158,43 +163,6 @@
                 
                 
             }
-            printGameState($allPlayers);
-            getImgURlForCardIndex(0);
-            
-            
-            /*function printCards($allPlayers)
-            {
-                $i=0;
-                foreach ($allPlayers as $player) 
-                {
-                   play();
-                    echo "<br/>";
-                    echo $player['name'] . "<br>";
-                    $i++;
-                }
-            }
-            printCards($allPlayers);*/
-            
-            
-            function getImgURlForCardIndex($index) {
-                
-                // get a number from 0 to 51
-                // return an image url 
-                
-                $suitIndex = floor($index / 13); 
-                echo "suitIndex:  $suitIndex"; 
-            }
-            
-            function generateDeck() {
-                for ($i = 0; $i < 51; $i++) {
-                    $card = array(
-                        'imgURL' => ""
-                        ); 
-                }
-
-            } 
-            
-            
             
             function fillUsedCards(& $usedCards){
                 for($i=0; $i<52; $i++){
