@@ -148,7 +148,7 @@
                 //$pick = rand(0, 52);
                 $pickedCard = $symbol . $folder;
                 if(!$usedCards[$pickedCard]){
-                    $usedCards[$pickedCard] = true;
+                    //$usedCards[$pickedCard] = true;
                     return false;
                 }
                 return true;
