@@ -4,17 +4,17 @@
         <title>SiverJack</title>
         <link href = "css/styles.css" rel="stylesheet" type="text/css" />
     </head>
-    
     <header>
             <strong>
                 <h1>Silverjack</h1>
             </strong>
     </header>
-    
     <body>
         <?php
-            $cards = [];    //Array of the cards
-            $player = [];   // Array of users
+            $cards = []; //Array of the cards
+            //$usedCards = []; //Array of the cards that is used
+            //fillUsedCards($usedCards); // fills the array with false
+            $player = []; // Array of users
             $player1 = array(
                 'name' => 'Mathias',
                 'imgURL' => './img/profiles_pictures/mathias.jpg',
@@ -60,25 +60,9 @@
                 
             );
             
-<<<<<<< HEAD
-            function play(){
-                //global $allPlayers;
-                //printGameState($allPlayers);
-                //getImgURlForCardIndex(0);
-                
-=======
-            function play()
-            {
->>>>>>> 49cbc0a26000bc3631ebe1f3ef7de0d7d51d314c
-                $usedCards = []; //Array of the cards that is used
-                fillUsedCards($usedCards); // fills the array with false
-                
-<<<<<<< HEAD
-                for($i=0; $i<52; $i++){
-=======
-                for($i=0; $i<4; $i++)
+            function play(& $usedCards){
+                for($i=0; $i<4; $i++) // Change needed to get score
                 {
->>>>>>> 49cbc0a26000bc3631ebe1f3ef7de0d7d51d314c
                     ${randomValue . $i } = rand(0,12);
                     ${folder . $i } = rand(0,3);
                     
@@ -94,6 +78,19 @@
                 }
                 
             }
+            
+
+            /*
+            function printGameState($allPlayers){
+                $i=0;
+                
+                foreach ($allPlayers as $player) {
+                    echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+                    echo "<br/>";
+                    echo $player['name'] . "<br/>";
+                    $i++;
+                }
+            }*/
             
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
@@ -153,35 +150,25 @@
                 
             }
             
-<<<<<<< HEAD
-            play();
-            printGameState($allPlayers);
-            getImgURlForCardIndex(0);
-=======
            
            
           //play();
            
->>>>>>> 49cbc0a26000bc3631ebe1f3ef7de0d7d51d314c
             
             function printGameState($allPlayers){
+                $usedCards = []; //Array of the cards that is used
+                fillUsedCards($usedCards); // fills the array with false
+                
+                
                 $i=0;
                 foreach ($allPlayers as $player) {
                     echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
-<<<<<<< HEAD
-                    //play();
-=======
-                    play();
->>>>>>> 49cbc0a26000bc3631ebe1f3ef7de0d7d51d314c
+                    play($usedCards);
                     echo "<br/>";
                     
                     echo $player['name'] . "<br>";
                     $i++;
-                    //play();
                 }
-<<<<<<< HEAD
-            }
-=======
                 //need sim. f(x)n
                 
                 
@@ -203,7 +190,6 @@
                 }
             }
             printCards($allPlayers);*/
->>>>>>> 49cbc0a26000bc3631ebe1f3ef7de0d7d51d314c
             
             
             function getImgURlForCardIndex($index) {
@@ -216,12 +202,15 @@
             }
             
             function generateDeck() {
-                // 
+                for ($i = 0; $i < 51; $i++) {
+                    $card = array(
+                        'imgURL' => ""
+                        ); 
+                }
 
             } 
             
             
-            // https://ide.c9.io/uuts/utsab 
             
             function fillUsedCards(& $usedCards){
                 for($i=0; $i<52; $i++){
