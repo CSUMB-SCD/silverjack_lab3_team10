@@ -43,6 +43,14 @@
                 'points' => 0
             );
             
+            /*$player5 = array(
+                'name' => 'Jazz',
+                'imgURL' => './img/profiles_pictures/jazz.JPG',
+                'hand' => array(),
+                'points' => 0
+            );*/
+            
+            
             $allPlayers = array(
 
                 $player1,
