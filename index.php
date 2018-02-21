@@ -82,8 +82,7 @@
                 echo $p1;
                 
             }
-            
-            
+
             function displaySymbol($randomValue, $folder) {
                 switch ($folder) {
                     case 0: $folder = "clubs";
