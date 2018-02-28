@@ -1,4 +1,6 @@
 <?php
+    
+    // Main function
     function play(){
         $player = []; // Array of users
         $player1 = array(
@@ -37,11 +39,10 @@
         );*/
             
         $allPlayers = array(
-
-        $player1,
-        $player2,
-        $player3,
-        $player4,
+            $player1,
+            $player2,
+            $player3,
+            $player4,
         );
             
             
@@ -50,23 +51,21 @@
     }
             
     function getHand(& $usedCards){
-        $p1;
+        $p1 = 0;
         while($p1 < 37)// Checks if the score is less than 37 to keep giving more cards
         {
-            ${randomValue . $i } = rand(0,12);
-            $p1+= ${randomValue . $i } + 1;
-            ${folder . $i } = rand(0,3);
+            $randomValue = rand(0,12);
+            $folder = rand(0,3);
             
             // Loop to check if a card has been used
-            while(checkUsedCards(${randomValue . $i }, ${folder . $i }, $usedCards))
-            {
-                ${randomValue . $i } = rand(0,12);
-                ${folder . $i } = rand(0,3);
+            while(checkUsedCards($randomValue, $folder, $usedCards)){
+                $randomValue = rand(0,12);
+                $folder = rand(0,3);
             }
-            
-            displaySymbol(${randomValue . $i }, ${folder . $i });
-            
+            $p1+= $randomValue + 1;
+            displaySymbol($randomValue, $folder);
         }
+        
         if($p1 > 42){
             echo "You got more than 42, you lost. Your result was: ";
         }
@@ -77,6 +76,20 @@
         
     }
     
+    function printGameState($allPlayers){
+        $usedCards = []; //Array of the cards that is used
+        fillUsedCards($usedCards); // fills the array with false
+        
+        $i=0;
+        foreach ($allPlayers as $player) {
+            echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
+            getHand($usedCards);
+            echo "<br/>";
+            
+            echo $player['name'] . "<br>";
+            $i++;
+        }
+    }
     
     function displaySymbol($randomValue, $folder) {
         switch ($folder) {
@@ -119,39 +132,15 @@
         }
         echo "<img id='reel$pos' src='img/cards/$folder/$symbol.png' alt='$symbol' title='". ucfirst($symbol) . "' width='70' >";
     }
-     
-    // used cards
+    
     function checkUsedCards($symbol, $folder, &$usedCards){
         //$pick = rand(0, 52);
         $pickedCard = $symbol . $folder;
         if(!$usedCards[$pickedCard]){
-            //$usedCards[$pickedCard] = true;
+            $usedCards[$pickedCard] = true;
             return false;
         }
         return true;
-        
-    }
-    
-   
-    
-    function printGameState($allPlayers){
-        $usedCards = []; //Array of the cards that is used
-        fillUsedCards($usedCards); // fills the array with false
-        
-        
-        $i=0;
-        foreach ($allPlayers as $player) {
-            echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
-            getHand($usedCards);
-            echo "<br/>";
-            
-            echo $player['name'] . "<br>";
-            $i++;
-        }
-        //need sim. f(x)n
-        
-        
-        
     }
     
     function fillUsedCards(& $usedCards){
