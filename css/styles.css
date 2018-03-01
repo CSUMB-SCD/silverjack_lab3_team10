@@ -5,7 +5,8 @@ imgURL.resize {
 }
 
 h1 {
-    font-family: sans-serif;
+    font-family: 'Graduate', cursive;
+    font-size: 4em;
     text-align: center;
 }
 .footer {
@@ -33,7 +34,7 @@ input{
     bottom:0px;
     left:750px;
     position:absolute;
-    font-size:1.5em;
+    font-size:2.5em;
     background-color: red;
     border:none;
     outline:red; /*hides button outline when clicking on it*/
@@ -49,17 +50,16 @@ input{
     position:absolute;
     text-align:center;
     top:450px;
-    font-size:1.5em;
+    font-size:5.5em;
     line-height: .7em;
+
 }
 imgURL.resize{
     width: 72px;
     height: 40px;
 }
-h1 {
-    font-family: sans-serif;
-    text-align: center;
-}
+
+
 .footer {
    position: fixed;
    left: 0;
@@ -68,4 +68,5 @@ h1 {
    background-color: transparent;
    color: white;
    text-align: center;
+
 }
