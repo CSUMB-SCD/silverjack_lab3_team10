@@ -20,7 +20,11 @@ h1 {
 }
 body{
     background-color: black;
-    color: white;
+    color: red;
+    font-family: 'Graduate', cursive;
+    font-size: 1.5em;
+
+
 }
 header{
     text-align: center;
@@ -68,5 +72,9 @@ imgURL.resize{
    background-color: transparent;
    color: white;
    text-align: center;
+
+}
+p1{
+    font-family: 'Graduate', cursive;
 
 }
