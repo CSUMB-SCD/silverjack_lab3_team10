@@ -67,7 +67,7 @@
         }
         
         if($p1 > 42){
-            echo "You got more than 42, you lost. Your result was: ";
+            echo "You lost. Your result was: ";
         }
         if($p1 == 42){
             echo "You won! Your result is: ";
@@ -81,6 +81,7 @@
         fillUsedCards($usedCards); // fills the array with false
         
         $i=0;
+        echo "<div id='border'>";
         foreach ($allPlayers as $player) {
             echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
             getHand($usedCards);
@@ -89,8 +90,8 @@
             echo $player['name'] . "<br>";
             $i++;
         }
+        echo "<div/>";
     }
-    
     function displaySymbol($randomValue, $folder) {
         switch ($folder) {
             case 0: $folder = "clubs";
