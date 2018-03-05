@@ -1,3 +1,13 @@
+<!-- 
+CST 336 
+Team 10, Lab 3 Silverjack
+Joshua Saavedra
+Jashmae Baculpo
+Matthias
+Raju Kumar
+Mayra Ochoa
+Mathias Torgalsboeen
+-->
 <?php
 include 'inc/functions.php';
 ?>
