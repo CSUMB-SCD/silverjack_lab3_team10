@@ -22,7 +22,6 @@ include 'inc/functions.php';
             play();
             
         ?>
-            
         <form>
                 <button class="btn btn-primary" onclick="window.location.href='index.php'">Play Again</button>
         </form>
