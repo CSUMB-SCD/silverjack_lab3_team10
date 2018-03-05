@@ -26,10 +26,18 @@ h1 {
 }
 body{
     background-color: black;
+<<<<<<< HEAD
     color: white;
     font-size: 20px;
     background-image:url("background2.jpg");
     opacity:5;
+=======
+    color: red;
+    font-family: 'Graduate', cursive;
+    font-size: 1.5em;
+
+
+>>>>>>> 5392a9402f16f26236eb04a865858e86a3c77c59
 }
 header{
     text-align: center;
@@ -79,6 +87,12 @@ imgURL.resize{
    text-align: center;
 
 }
+<<<<<<< HEAD
 #border {
     margin-left: 7%;
+=======
+p1{
+    font-family: 'Graduate', cursive;
+
+>>>>>>> 5392a9402f16f26236eb04a865858e86a3c77c59
 }
