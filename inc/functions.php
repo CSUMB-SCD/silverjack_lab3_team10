@@ -82,6 +82,7 @@
         
         $i=0;
         echo "<div id='border'>";
+        shuffle($allPlayers);
         foreach ($allPlayers as $player) {
             echo "<img id ='reel$i' src='" . $player['imgURL'] . "' />";
             getHand($usedCards);
